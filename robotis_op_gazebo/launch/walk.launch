@@ -3,8 +3,9 @@
 
   <param name="use_sim_time" value="true" />
 
-   <param name="robot_description"
-   command="$(find xacro)/xacro.py '$(find robotis_op_description)/robots/robotis_op.urdf.xacro'" />  
+   <!-- <param name="robot_description"
+   command="$(find xacro)/xacro.py '$(find robotis_op_description)/robots/robotis_op.urdf.xacro'" />   -->
+   <param name="robot_description" textfile="$(find robotis_op_description)/robots/robotis_op_orig.urdf" />  
    
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
     <arg name="world_name" value="$(find robotis_op_gazebo)/worlds/soccer_field_mod.world"/>
